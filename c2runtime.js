@@ -15254,7 +15254,7 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 		self = this;
 		vkBridge.send('VKWebAppInit')
             .then((data) => {
-			console.log("Ответ получен: "+data.reult)
+			   console.log("Callback: vkBridge Init. data.result: "+data.reult)
                if (data.result) { sdk_inite = 1; GetLunchParamp(); } })
             .catch((error) => { console.log(error); });
 	};
@@ -28054,19 +28054,19 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Arr,
 	cr.plugins_.Audio,
 	cr.plugins_.Browser,
+	cr.plugins_.Function,
 	cr.plugins_.Button,
 	cr.plugins_.Dictionary,
-	cr.plugins_.Function,
 	cr.plugins_.List,
 	cr.plugins_.Keyboard,
 	cr.plugins_.LocalStorage,
 	cr.plugins_.Particles,
-	cr.plugins_.Sprite,
-	cr.plugins_.Touch,
+	cr.plugins_.TiledBg,
 	cr.plugins_.TextBox,
 	cr.plugins_.Spritefont2,
+	cr.plugins_.Touch,
+	cr.plugins_.Sprite,
 	cr.plugins_.Text,
-	cr.plugins_.TiledBg,
 	cr.behaviors.Flash,
 	cr.behaviors.Sin,
 	cr.behaviors.Fade,
