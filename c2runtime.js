@@ -28269,6 +28269,7 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.find,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnInterstitialShown,
 	cr.system_object.prototype.exps.wallclocktime,
+	cr.system_object.prototype.cnds.CompareBetween,
 	cr.plugins_.Sprite.prototype.exps.BBoxLeft,
 	cr.plugins_.Sprite.prototype.exps.BBoxBottom,
 	cr.plugins_.AMG_VKbridge.prototype.acts.ShowLider,
