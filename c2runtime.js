@@ -15461,7 +15461,7 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 			    SetMethodResult(mName, data.vk_app_id);
                 if (data.vk_app_id) {
                     sdk_lunchParams = data;
-					Trigger(Condition().OnLunchParams); }
+					Trigger(Condition().OnLunchParams);
                     }
             })
              .catch((error) => {
@@ -28059,20 +28059,20 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.AMG_VKbridge,
 	cr.plugins_.Arr,
 	cr.plugins_.Audio,
+	cr.plugins_.Dictionary,
 	cr.plugins_.Button,
 	cr.plugins_.Function,
-	cr.plugins_.Dictionary,
 	cr.plugins_.Browser,
 	cr.plugins_.Keyboard,
-	cr.plugins_.LocalStorage,
-	cr.plugins_.List,
 	cr.plugins_.Particles,
-	cr.plugins_.Spritefont2,
-	cr.plugins_.TiledBg,
-	cr.plugins_.Text,
-	cr.plugins_.Sprite,
+	cr.plugins_.List,
+	cr.plugins_.LocalStorage,
 	cr.plugins_.TextBox,
 	cr.plugins_.Touch,
+	cr.plugins_.Text,
+	cr.plugins_.Spritefont2,
+	cr.plugins_.TiledBg,
+	cr.plugins_.Sprite,
 	cr.behaviors.Flash,
 	cr.behaviors.Sin,
 	cr.behaviors.Fade,
