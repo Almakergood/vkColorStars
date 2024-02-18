@@ -15422,9 +15422,13 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 		.then((data) => {
             SetMethodResult(mName, data.keys);
 			if (data.keys) {
+				console.log("Получен список ключей:");
+				console.log(data.keys);
 				mName = 'VKWebAppStorageGet';
 				vkBridge.send(mName, {keys: data.keys})
 		          .then((data1) => {
+					  console.log("Получены ключ-значения:");
+					  console.log(data1.keys);
                      SetMethodResult(mName, data1.keys);
 			         if (data1.keys) {
 						 sdk_storage = data1.keys;
@@ -28060,19 +28064,19 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Audio,
 	cr.plugins_.Arr,
 	cr.plugins_.Dictionary,
-	cr.plugins_.Button,
 	cr.plugins_.Function,
+	cr.plugins_.Button,
 	cr.plugins_.Browser,
-	cr.plugins_.Keyboard,
-	cr.plugins_.List,
-	cr.plugins_.Particles,
 	cr.plugins_.LocalStorage,
-	cr.plugins_.TextBox,
-	cr.plugins_.Text,
-	cr.plugins_.Sprite,
+	cr.plugins_.List,
+	cr.plugins_.Keyboard,
+	cr.plugins_.Particles,
 	cr.plugins_.Spritefont2,
 	cr.plugins_.TiledBg,
+	cr.plugins_.Sprite,
 	cr.plugins_.Touch,
+	cr.plugins_.TextBox,
+	cr.plugins_.Text,
 	cr.behaviors.Flash,
 	cr.behaviors.Sin,
 	cr.behaviors.Fade,
