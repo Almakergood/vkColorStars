@@ -28295,6 +28295,7 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.cnds.IsMobile,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnGetKeys,
 	cr.plugins_.AMG_VKbridge.prototype.exps.getKey,
+	cr.system_object.prototype.exps.trim,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnLunchParams,
 	cr.plugins_.AMG_VKbridge.prototype.exps.getLanchProp,
 	cr.plugins_.AMG_VKbridge.prototype.acts.GetKeys
