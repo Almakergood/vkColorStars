@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1708257574,
+	"version": 1708267570,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -72,6 +72,9 @@
 		"newcolor-sheet2.png",
 		"shinestaranim-sheet0.png",
 		"shinestaranim-sheet1.png",
+		"saveimg-sheet0.png",
+		"saveimg-sheet1.png",
+		"saveimg-sheet2.png",
 		"spritefont.png",
 		"notifyads-sheet0.png",
 		"fieldsmain9-sheet0.png",
