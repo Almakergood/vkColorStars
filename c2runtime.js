@@ -28290,7 +28290,7 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.AMG_VKbridge.prototype.exps.sdk_error,
 	cr.plugins_.AMG_VKbridge.prototype.exps.getKey,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnAnyVKbridge,
+	cr.plugins_.AMG_VKbridge.prototype.cnds.OnLunchParams,
 	cr.plugins_.AMG_VKbridge.prototype.exps.getLanchProp,
-	cr.plugins_.AMG_VKbridge.prototype.acts.GetKeys,
-	cr.plugins_.AMG_VKbridge.prototype.cnds.OnLunchParams
+	cr.plugins_.AMG_VKbridge.prototype.acts.GetKeys
 ];};
