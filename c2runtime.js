@@ -15254,8 +15254,8 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 		self = this;
 		vkBridge.send('VKWebAppInit')
             .then((data) => {
-			   console.log("Callback: vkBridge Init. data.result: "+data.reult)
-               if (data.result) { sdk_inite = 1; GetLunchParamp(); } })
+			   console.log("vkBridge Init");
+               sdk_inite = 1; GetLunchParamp();  })
             .catch((error) => { console.log(error); });
 	};
 	instanceProto.onDestroy = function ()
@@ -28055,18 +28055,18 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Audio,
 	cr.plugins_.Browser,
 	cr.plugins_.Function,
-	cr.plugins_.Button,
 	cr.plugins_.Dictionary,
-	cr.plugins_.List,
+	cr.plugins_.Button,
 	cr.plugins_.Keyboard,
 	cr.plugins_.LocalStorage,
 	cr.plugins_.Particles,
-	cr.plugins_.TiledBg,
-	cr.plugins_.TextBox,
-	cr.plugins_.Spritefont2,
-	cr.plugins_.Touch,
+	cr.plugins_.List,
 	cr.plugins_.Sprite,
 	cr.plugins_.Text,
+	cr.plugins_.Spritefont2,
+	cr.plugins_.TiledBg,
+	cr.plugins_.TextBox,
+	cr.plugins_.Touch,
 	cr.behaviors.Flash,
 	cr.behaviors.Sin,
 	cr.behaviors.Fade,
@@ -28276,10 +28276,12 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Keyboard.prototype.cnds.OnKey,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnInterstitialLoaded,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnRewardLoaded,
+	cr.plugins_.AMG_VKbridge.prototype.exps.getLanchProp,
 	cr.system_object.prototype.cnds.IsMobile,
 	cr.plugins_.AMG_VKbridge.prototype.acts.GetKeys,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnGetKeys,
 	cr.plugins_.AMG_VKbridge.prototype.exps.getKey,
+	cr.plugins_.Browser.prototype.acts.ConsoleLog,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnAnyVKbridge,
 	cr.plugins_.AMG_VKbridge.prototype.exps.sdk_method,
 	cr.plugins_.AMG_VKbridge.prototype.exps.sdk_result
