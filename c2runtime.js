@@ -15444,11 +15444,9 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 	Exps.prototype.sdk_error = function (ret) { ret.set_string(sdk_error);	};
 	Exps.prototype.getKey = function (ret, key) {
 		var res = "";
-		if (sdk_storage) {
-		    for (let i = 0; i < sdk_storage.length; i++) { if (sdk_storage[i] === key) { res = sdk_storage[i]; break;} }
+		for (let item of sdk_storage) {
+		     if (item.key == key) { res = item.value+"";}
 		}
-		else { res = ""; }
-		if (!res) {res = ""; }
 	    ret.set_string(res);
 	};
 	Exps.prototype.getLanchProp = function (ret, prop) {
@@ -28069,14 +28067,14 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Browser,
 	cr.plugins_.LocalStorage,
 	cr.plugins_.List,
-	cr.plugins_.Keyboard,
 	cr.plugins_.Particles,
-	cr.plugins_.Spritefont2,
-	cr.plugins_.TiledBg,
-	cr.plugins_.Sprite,
-	cr.plugins_.Touch,
+	cr.plugins_.Keyboard,
 	cr.plugins_.TextBox,
 	cr.plugins_.Text,
+	cr.plugins_.Sprite,
+	cr.plugins_.Touch,
+	cr.plugins_.Spritefont2,
+	cr.plugins_.TiledBg,
 	cr.behaviors.Flash,
 	cr.behaviors.Sin,
 	cr.behaviors.Fade,
