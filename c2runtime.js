@@ -15482,8 +15482,8 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 	 { sdk_event = method;
 	   if (res) {sdk_result = 1;}
 	   else {sdk_result = 0;}
-	   sdk_error = err.toString();
-	   if (err) {console.log(err);}
+	   sdk_error = 0;
+	   if (err) {console.log(err); sdk_error = 1;}
 	   Trigger(Condition().OnAnyVKbridge);
 	 }
 }());
@@ -28058,14 +28058,14 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Dictionary,
 	cr.plugins_.Button,
 	cr.plugins_.Function,
-	cr.plugins_.List,
-	cr.plugins_.Keyboard,
-	cr.plugins_.LocalStorage,
 	cr.plugins_.Particles,
+	cr.plugins_.LocalStorage,
+	cr.plugins_.Keyboard,
+	cr.plugins_.List,
 	cr.plugins_.Text,
-	cr.plugins_.TiledBg,
 	cr.plugins_.Touch,
 	cr.plugins_.Spritefont2,
+	cr.plugins_.TiledBg,
 	cr.plugins_.Sprite,
 	cr.plugins_.TextBox,
 	cr.behaviors.Flash,
