@@ -15407,7 +15407,7 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 	};
 	Acts.prototype.SaveKey = function (item, val)
 	{
-		let mName = 'VKWebAppStorageSet';
+		var mName = 'VKWebAppStorageSet';
 		vkBridge.send(mName, {key: item, value: val})
 		.then((data) => {
             SetMethodResult(mName, data.result);
@@ -15416,7 +15416,7 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 	};
 	Acts.prototype.GetKeys = function (c, o)
 	{
-		let mName = 'VKWebAppStorageGetKeys';
+		var mName = 'VKWebAppStorageGetKeys';
 		vkBridge.send(mName, {count: c, offset: o})
 		.then((data) => {
             SetMethodResult(mName, data.keys);
@@ -15438,7 +15438,7 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 	Exps.prototype.sdk_result = function (ret) { ret.set_int(sdk_result);	};
 	Exps.prototype.sdk_error = function (ret) { ret.set_string(sdk_error);	};
 	Exps.prototype.getKey = function (ret, key) {
-		let res = "";
+		var res = "";
 		if (sdk_storage) {
 		    for (let i = 0; i < sdk_storage.length; i++) { if (sdk_storage[i] === key) { res = sdk_storage[i]; break;} }
 		}
@@ -15447,8 +15447,9 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 	    ret.set_string(res);
 	};
 	Exps.prototype.getLanchProp = function (ret, prop) {
-		if (sdk_lunchParams){
-		ret.set_string(sdk_lunchParams[prop]);	};
+		var res = "";
+		if (sdk_lunchParams){ res = sdk_lunchParams[prop];	};
+		ret.set_string(res);
 	}
 	Exps.prototype.sdk_inite = function (ret) { ret.set_int(sdk_inite);	};
 	pluginProto.exps = new Exps();
@@ -28055,19 +28056,19 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Arr,
 	cr.plugins_.Audio,
 	cr.plugins_.Browser,
-	cr.plugins_.Dictionary,
 	cr.plugins_.Button,
+	cr.plugins_.Dictionary,
 	cr.plugins_.Function,
-	cr.plugins_.Particles,
 	cr.plugins_.LocalStorage,
-	cr.plugins_.Keyboard,
+	cr.plugins_.Particles,
 	cr.plugins_.List,
-	cr.plugins_.Text,
+	cr.plugins_.Keyboard,
+	cr.plugins_.Sprite,
+	cr.plugins_.TiledBg,
+	cr.plugins_.TextBox,
 	cr.plugins_.Touch,
 	cr.plugins_.Spritefont2,
-	cr.plugins_.TiledBg,
-	cr.plugins_.Sprite,
-	cr.plugins_.TextBox,
+	cr.plugins_.Text,
 	cr.behaviors.Flash,
 	cr.behaviors.Sin,
 	cr.behaviors.Fade,
