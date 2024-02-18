@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1708253671,
+	"version": 1708255474,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -99,6 +99,6 @@
 		"styles.css",
 		"arial_curive.otf",
 		"https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js",
-		"alert('inite')"
+		""
 	]
 }

@@ -15291,6 +15291,7 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 	Cnds.prototype.OnAddAddFriends = function () {return true;};
 	Cnds.prototype.OnSaveKey = function () {return true;};
 	Cnds.prototype.OnGetKeys = function () {return true;};
+	Cnds.prototype.OnLunchParams = function () {return true;};
 	pluginProto.cnds = new Cnds();
 	function Acts() {};
 	Acts.prototype.VKsend = function (method, param)
@@ -15454,14 +15455,16 @@ cr.plugins_.AMG_VKbridge = function(runtime)
 	Exps.prototype.sdk_inite = function (ret) { ret.set_int(sdk_inite);	};
 	pluginProto.exps = new Exps();
 	function GetLunchParamp (){
-		vkBridge.send('VKWebAppGetLaunchParams')
+		var mName = 'VKWebAppGetLaunchParams';
+		vkBridge.send(mName)
             .then((data) => {
+			    SetMethodResult(mName, data.vk_app_id);
                 if (data.vk_app_id) {
                     sdk_lunchParams = data;
                     }
             })
              .catch((error) => {
-				   data = error;
+				   SetMethodResult(mName, false, error);
                    console.log(error);
             });
 	}
@@ -28055,20 +28058,20 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.AMG_VKbridge,
 	cr.plugins_.Arr,
 	cr.plugins_.Audio,
-	cr.plugins_.Browser,
-	cr.plugins_.Button,
 	cr.plugins_.Dictionary,
+	cr.plugins_.Button,
 	cr.plugins_.Function,
+	cr.plugins_.Browser,
 	cr.plugins_.LocalStorage,
-	cr.plugins_.Particles,
-	cr.plugins_.List,
 	cr.plugins_.Keyboard,
-	cr.plugins_.Sprite,
-	cr.plugins_.TiledBg,
+	cr.plugins_.List,
+	cr.plugins_.Particles,
 	cr.plugins_.TextBox,
-	cr.plugins_.Touch,
 	cr.plugins_.Spritefont2,
 	cr.plugins_.Text,
+	cr.plugins_.Sprite,
+	cr.plugins_.TiledBg,
+	cr.plugins_.Touch,
 	cr.behaviors.Flash,
 	cr.behaviors.Sin,
 	cr.behaviors.Fade,
@@ -28287,5 +28290,6 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.AMG_VKbridge.prototype.exps.getKey,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnAnyVKbridge,
 	cr.plugins_.AMG_VKbridge.prototype.exps.getLanchProp,
-	cr.plugins_.AMG_VKbridge.prototype.acts.GetKeys
+	cr.plugins_.AMG_VKbridge.prototype.acts.GetKeys,
+	cr.plugins_.AMG_VKbridge.prototype.cnds.OnLunchParams
 ];};
