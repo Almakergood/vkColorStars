@@ -28278,14 +28278,14 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Keyboard.prototype.cnds.OnKey,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnInterstitialLoaded,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnRewardLoaded,
-	cr.plugins_.AMG_VKbridge.prototype.exps.getLanchProp,
 	cr.system_object.prototype.cnds.IsMobile,
-	cr.plugins_.AMG_VKbridge.prototype.acts.GetKeys,
-	cr.plugins_.Browser.prototype.acts.ConsoleLog,
 	cr.plugins_.AMG_VKbridge.prototype.cnds.OnGetKeys,
-	cr.plugins_.AMG_VKbridge.prototype.exps.getKey,
+	cr.plugins_.Browser.prototype.acts.ConsoleLog,
 	cr.plugins_.AMG_VKbridge.prototype.exps.sdk_method,
 	cr.plugins_.AMG_VKbridge.prototype.exps.sdk_result,
 	cr.plugins_.AMG_VKbridge.prototype.exps.sdk_error,
-	cr.plugins_.AMG_VKbridge.prototype.cnds.OnAnyVKbridge
+	cr.plugins_.AMG_VKbridge.prototype.exps.getKey,
+	cr.plugins_.AMG_VKbridge.prototype.cnds.OnAnyVKbridge,
+	cr.plugins_.AMG_VKbridge.prototype.exps.getLanchProp,
+	cr.plugins_.AMG_VKbridge.prototype.acts.GetKeys
 ];};
