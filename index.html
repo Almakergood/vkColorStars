@@ -44,14 +44,14 @@
  
 <body> 
 	<div id="fb-root"></div>
-	
-        <script asynс src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js" onload = "vkInit();" ></script>
-	
+
 	<script>
 		function vkInit () { vkBridge.send('VKWebAppInit')
             .then((data) => { console.log("vkBridge Init");  })
 	    .catch((error) => { console.log(error); });}
 	</script>
+	
+        <script asynс src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js" onload = "vkInit();" ></script>
 		
 	<script>
 	// Issue a warning if trying to preview an exported project on disk.
