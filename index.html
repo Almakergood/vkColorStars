@@ -45,6 +45,14 @@
 <body> 
 	<div id="fb-root"></div>
 	
+        <script asynс src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js" onload = "vkInit();" ></script>
+	
+	<script>
+		function vkInit () { vkBridge.send('VKWebAppInit')
+            .then((data) => { console.log("vkBridge Init");  })
+	    .catch((error) => { console.log(error); });}
+	</script>
+		
 	<script>
 	// Issue a warning if trying to preview an exported project on disk.
 	(function(){
@@ -78,8 +86,6 @@
 	
 	<!-- Construct 2 exported games require jQuery. -->
 	<script src="jquery-3.4.1.min.js"></script>
-
-	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
 	
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
